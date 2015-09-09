@@ -7,4 +7,6 @@
 
 2. Use a logic operator like == or !=, &&, ||, <, >, or anything to check the value of a position in the board and return true / false depending on whether it's empty. Code in position_taken, run tests.
 
+3. The second part of the test suite has broken boards, boards that instead of having " " for empty cells have "". They are causing our otherwise working code to break. Compare the value of a position to X or O or "" or " " to make the last tests pass.
+
 3. At end point out that this is just part of the validation routine, this method will break with bad input so we need to also make sure that's good, let's continue for now.

@@ -41,4 +41,11 @@ describe '#position_taken? in lib/position_taken.rb' do
     position = 8
     expect(position_taken?(board, position)).to be(true)
   end
+
+  it 'broken board' do
+    board = ["X", "", " ", " ", " ", " ", " ", " ", "O"]
+
+    position = 1
+    expect(position_taken?(board, position)).to be(false)      
+  end  
 end
