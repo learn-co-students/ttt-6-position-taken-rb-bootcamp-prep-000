@@ -1,4 +1,4 @@
-## Validating User Input
+# Position Taken in Tic Tac Toe
 
 ## Objectives
 
