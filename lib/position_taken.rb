@@ -1,15 +1,15 @@
-
 def position_taken?(board, position)
-  # First, walk them through the most basic 'position is NOT taken if the array index equal an empty string
-  # so, let's build and if statement.
-  # then, edge cases: what if empty string is '' instead of ' '? what if the position occuppied by nil?
+  # basic solution: 
 
-  #, then once we get tests passing with below, intro ternary operator and walk through refactor
+  # taken = nil
   # if (board[position] ==  " " || board[position] == "" || board[position] == nil)
-  #   return false
+  #   taken = false
   # else
-  #   return true
+  #   taken = true
   # end
+  # taken
+
+  # advanced solution w/ ternary operator
   (board[position] ==  " " || board[position] == "" || board[position] == nil) ? 
     false : true
 
