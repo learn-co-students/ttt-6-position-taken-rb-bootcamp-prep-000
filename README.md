@@ -4,7 +4,6 @@
 
 1. Define a method that updates an array passed into it as an argument.
 2. Define a method that uses control flow in the form of `if/else` statements to manipulate an array.
-3. Learn about the ternary operator and use it to refactor `if/else` logic.
 
 ## Overview
 
@@ -30,7 +29,6 @@ We'll be breaking this lab down into three parts:
 
 1. Code a basic solution: a method that checks if a given space on the board is empty, i.e. equal to `" "`.
 2. Address the "edge cases" - scenarios that qualify as an empty space that isn't equal to `" "`. For example, we would want to consider `""` to be an empty space as well.
-3. Refactor our method using the ternary operator.
 
 ### Part I: checking for an empty space
 
@@ -88,7 +86,7 @@ Our tic tac toe game *should* utilize a board in which empty spaces are represen
 
 We need to change the content of the `#position_taken?` method to check to see if the given `board[position]` is equal to *either* and empty string that looks like this `" "` *or* and empty string that looks like this `""`.
 
-**Hint:** Use the `||`, or "or" operator to check for both of the above-described conditions on the same line.
+**Hint:** You can use the `||`, or "or" operator to check for both of the above-described conditions on the same line.
 
 #### Edge Case No. 2
 
@@ -105,27 +103,3 @@ Failures:
 ```
 
 It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted position is equal to *either* an empty string, `" "`, *or* and empty string `""`, *or* `nil`.
-
-Once you get all of the tests passing, move on to the next section.
-
-### Part III: Refactoring Using the Ternary Operator
-
-So far, our code leaves a little something to be desired. We are using an `if/else` statement that requires us to set a variable, `taken`, outside of the `if/else` statement, modify that variable and then return the variable at the end of the method. That's a lot of code to answer the simple question: "is this position taken?"
-
-If you abstract out the task at hand, you might say "If a certain condition is met/if a certain condition evaluates to true, return one thing, otherwise, return something else." Ruby offers us a neat and efficient (not to mention elegant) way to accomplish such a task: **the ternary operator**.
-
-The ternary operator works like this:
-
-```ruby
-[if this statement is true] ? [return this thing] : [otherwise return this thing]
-```
-
-Try using the ternary operator to refactor the code in `#position_taken?` into one line.
-
-### A Note on Refactoring
-
-Refactoring is the practice of taking working code and making it better. As programmers, and especially as beginners, our priority is to make our code *work*. Once we get it working and those tests are passing, we can think about making our code *right*. What does it mean to make code "right"? It means writing code that is neat, readable and fast.
-
-Very generally speaking, we prefer shorter methods over longer ones. So, if we can refactor a long method like our original `#position_taken?` method into something that works and reads well and fits on just one line, we want to do it.
-
-The more you learn about Ruby, the easier it will be to recognize code that is "smelly", or in need of refactoring. For now, continue to focus on making it work and just keep in mind some of the best practices that we'll be pointing out along the way.
