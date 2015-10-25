@@ -84,7 +84,7 @@ It looks like our method *also* needs to treat `""` as an empty, or not taken, s
 
 Our tic tac toe game *should* utilize a board in which empty spaces are represented by an empty string that looks like this: `" "`. However, we could imagine some other programmer using our code and creating a tic tac toe game with a board in which empty spaces on the board are represented by an empty string that looks like this: `""`. We don't *intend* for our program to be run that way, but it's not that unlikely that it could happen. Thus, we have our first edge case.
 
-We need to change the content of the `#position_taken?` method to check to see if the given `board[position]` is equal to *either* and empty string that looks like this `" "` *or* and empty string that looks like this `""`.
+We need to change the content of the `#position_taken?` method to check to see if the given `board[position]` is equal to *either* an empty string that looks like this `" "` *or* an empty string that looks like this `""`.
 
 **Hint:** You can use the `||`, or "or" operator to check for both of the above-described conditions on the same line.
 
