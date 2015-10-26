@@ -58,7 +58,7 @@ array[index_number]
 
 Then we want to know if the value at that index of the array is equal to an empty string, `" "`, our method should return `false`, indicating that it is not taken.
 
-**Reminder:** Remember that to check for equality, we use the `==` operator, not the `=` operator. The `=` operator is the assignment operator, it sets a variable equal to a value. The `==` operator is the equality operator. It returns `true` if the value on the left side of the operator is the same as the value on the right side of the operator. Otherwise it returns false. To get this test passing, you could aslo use the `!=`, or "not equal" operator.
+**Reminder:** Remember that to check for equality, we use the `==` operator, not the `=` operator. The `=` operator is the assignment operator, it sets a variable equal to a value. The `==` operator is the equality operator. It returns `true` if the value on the left side of the operator is the same as the value on the right side of the operator. Otherwise it returns false. To get this test passing, you could also use the `!=`, or "not equal" operator.
 
 You'll be able to use `if/else` or simple boolean operators like `&&`, `||`, or `!=`, or '=='.
 
@@ -84,7 +84,7 @@ It looks like our method *also* needs to treat `""` as an empty, or not taken, s
 
 Our tic tac toe game *should* utilize a board in which empty spaces are represented by an empty string that looks like this: `" "`. However, we could imagine some other programmer using our code and creating a tic tac toe game with a board in which empty spaces on the board are represented by an empty string that looks like this: `""`. We don't *intend* for our program to be run that way, but it's not that unlikely that it could happen. Thus, we have our first edge case.
 
-We need to change the content of the `#position_taken?` method to check to see if the given `board[position]` is equal to *either* and empty string that looks like this `" "` *or* and empty string that looks like this `""`.
+We need to change the content of the `#position_taken?` method to check to see if the given `board[position]` is equal to *either* an empty string that looks like this `" "` *or* an empty string that looks like this `""`.
 
 **Hint:** You can use the `||`, or "or" operator to check for both of the above-described conditions on the same line.
 
