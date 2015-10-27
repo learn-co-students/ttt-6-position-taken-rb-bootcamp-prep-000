@@ -13,6 +13,8 @@ In this lab we'll be adding a `#position_taken?` method to our Tic Tac Toe game.
 
 For example, if the user inputs that they would like to fill out position `2`, our `#position_taken?` method will check to see if that position is vacant or if it contains an "X" or and "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
 
+###  Important note:  in previous iterations of Tic-Tac-Toe, the programmer was required to adjust the index of the array such that when the person playing the game choose position 1, we actually look at position 0. Here position 1 *MEANS* position 1.
+
 ### Validating User Input
 
 The underlying goal of this method is to check, or validate, user input against the current state of the game board. Validating data or user input is a big part of programming. In this particular example of our tic tac toe game, our entire game would break if a user could overwrite board positions that are already filled out with an "X" or and "O". Validations are therefore a necessary part of making our program function that way it is intended.
