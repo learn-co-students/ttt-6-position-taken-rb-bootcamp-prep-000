@@ -13,7 +13,7 @@ In this lab we'll be adding a `#position_taken?` method to our Tic Tac Toe game.
 
 For example, if the user inputs that they would like to fill out position `2`, our `#position_taken?` method will check to see if that position is vacant or if it contains an "X" or and "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
 
-Important note:  in previous iterations of Tic-Tac-Toe, the programmer was required to adjust the index of the array such that when the person playing the game chose position 1, we actually look at position 0. In this helper method, position 1 _*means*_ position 1.
+Important note:  in previous iterations of Tic-Tac-Toe, the programmer was required to adjust the index of the array such that when the person playing the game chose position 1, we actually look at position 0. In this helper method, position 1 _*means*_ position 1. Whenever we call this helper method, the data being passed in will already be offset through the other method that is calling it. We'll see this firsthand in the very next lab!
 
 ### Validating User Input
 
