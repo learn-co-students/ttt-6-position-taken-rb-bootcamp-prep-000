@@ -13,7 +13,7 @@ In this lab we'll be adding a `#position_taken?` method to our Tic Tac Toe game.
 
 For example, if the user inputs that they would like to fill out position `2`, our `#position_taken?` method will check to see if that position is vacant or if it contains an "X" or and "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
 
-Important note:  in previous iterations of Tic-Tac-Toe, the programmer was required to adjust the index of the array such that when the person playing the game chose position 1, we actually look at position 0. In this helper method, position 1 _*means*_ position 1.
+Important note:  in previous iterations of Tic-Tac-Toe, the programmer was required to adjust the index of the array such that when the person playing the game chose position 1, we actually look at position 0. In this helper method, position 1 _*means*_ position 1. Whenever we call this helper method, the data being passed in will already be offset through the other method that is calling it. We'll see this firsthand in the very next lab!
 
 ### Validating User Input
 
@@ -27,7 +27,7 @@ Conventionally, we name methods that return either `true` or `false` with a ques
 
 ## Instructions
 
-We'll be breaking this lab down into three parts:
+We'll be breaking this lab down into two parts:
 
 1. Code a basic solution: a method that checks if a given space on the board is empty, i.e. equal to `" "`.
 2. Address the "edge cases" - scenarios that qualify as an empty space that isn't equal to `" "`. For example, we would want to consider `""` to be an empty space as well.
