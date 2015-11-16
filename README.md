@@ -27,7 +27,7 @@ Conventionally, we name methods that return either `true` or `false` with a ques
 
 ## Instructions
 
-We'll be breaking this lab down into three parts:
+We'll be breaking this lab down into two parts:
 
 1. Code a basic solution: a method that checks if a given space on the board is empty, i.e. equal to `" "`.
 2. Address the "edge cases" - scenarios that qualify as an empty space that isn't equal to `" "`. For example, we would want to consider `""` to be an empty space as well.
