@@ -11,7 +11,7 @@ We already have methods that display the game board (which is mapped to an array
 
 In this lab we'll be adding a `#position_taken?` method to our Tic Tac Toe game. This method will be responsible for evaluating the user's input against the Tic Tac Toe board and checking to see whether or not that position is occupied.
 
-For example, if the user inputs that they would like to fill out position `2`, our `#position_taken?` method will check to see if that position is vacant or if it contains an "X" or and "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
+For example, if the user inputs that they would like to fill out position `2`, our `#position_taken?` method will check to see if that position is vacant or if it contains an "X" or an "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
 
 Important note:  in previous iterations of Tic-Tac-Toe, the programmer was required to adjust the index of the array such that when the person playing the game chose position 1, we actually look at position 0. In this helper method, position 1 _*means*_ position 1. Whenever we call this helper method, the data being passed in will already be offset through the other method that is calling it. We'll see this firsthand in the very next lab!
 
@@ -105,5 +105,3 @@ Failures:
 ```
 
 It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted position is equal to *either* an empty string, `" "`, *or* and empty string `""`, *or* `nil`.
-
-<a href='https://learn.co/lessons/ttt-6-position-taken-rb' data-visibility='hidden'>View this lesson on Learn.co</a>
