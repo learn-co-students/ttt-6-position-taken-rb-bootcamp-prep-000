@@ -104,4 +104,6 @@ Failures:
             got nil
 ```
 
-It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted position is equal to *either* an empty string, `" "`, *or* and empty string `""`, *or* `nil`.
+It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted position is equal to *either* an empty string, `" "`, *or* an empty string `""`, *or* `nil`.
+
+<a href='https://learn.co/lessons/ttt-6-position-taken-rb' data-visibility='hidden'>View this lesson on Learn.co</a>
