@@ -23,7 +23,7 @@ The concept of validations is a common one, and you're likely to encounter it in
 
 ### A Note on Methods Ending in a `?`
 
-Conventionally, we name methods that return either `true` or `false` with a question, ending in a literal question mark. One of the most appealing features of Ruby, especially from the point of view of beginner programmers, is it's readability. Ruby lends itself especially well to elegant and sensical statements. So, if our method is meant to answer the question: "is this position taken?", we will phrase our method definition just like that.
+Conventionally, we name methods that return either `true` or `false` (like yes-or-no questions) by adding a literal question mark to the end of the name. So, if our method is meant to answer the question: "is this position taken?", we will phrase our method definition just like that, `position_taken?`. This reflects one of the most appealing features of Ruby, its readability. Ruby lends itself especially well to elegant and sensical statements, which offers advantages to beginner programmers.
 
 ## Instructions
 
