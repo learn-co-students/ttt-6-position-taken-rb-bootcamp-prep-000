@@ -11,9 +11,11 @@ We already have methods that display the game board (which is mapped to an array
 
 In this lab we'll be adding a `#position_taken?` method to our Tic Tac Toe game. This method will be responsible for evaluating the user's input against the Tic Tac Toe board and checking to see whether or not that position is occupied.
 
-For example, if the user inputs that they would like to fill out position `2`, our `#position_taken?` method will check to see if that position is vacant or if it contains an "X" or an "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
+For example, if the user inputs that they would like to fill out position `"2"`, we would take that string `"2"` and convert it to board index 1. Then we pass the index to our `#position_taken?` and check to see if that position is vacant or if it contains an "X" or an "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
 
-Important note:  in previous iterations of Tic-Tac-Toe, the programmer was required to adjust the index of the array such that when the person playing the game chose position 1, we actually look at position 0. In this helper method, position 1 _*means*_ position 1. Whenever we call this helper method, the data being passed in will already be offset through the other method that is calling it. We'll see this firsthand in the very next lab!
+Basically, we have the `#position_take?` method so you don't end up playing with this guy:
+
+![robot doesnt know positio_take?](https://i.imgur.com/GTk0h37.gif "No body wants to play tic tac toe with this guy")
 
 ### Validating User Input
 
@@ -34,7 +36,7 @@ We'll be breaking this lab down into two parts:
 
 ### Part I: checking for an empty space
 
-To get started, let's run our test suite. Looks like we need to define our method, called `#position_taken?` to accept two arguments, the board (which, if you recall, is an array with 9 indices) and the position that the player wishes to fill with their token, an "X" or and "O". Go ahead and do that, and then run the test suite again.
+To get started, let's run our test suite. Looks like we need to define our method, called `#position_taken?` to accept two arguments, the board (which, if you recall, is an array with 9 indices) and the index that the player wishes to fill with their token, an "X" or and "O". Go ahead and do that, and then run the test suite again.
 
 Let's take a look at our first error message now:
 
@@ -42,7 +44,7 @@ Let's take a look at our first error message now:
 Failures:
 
   1) #position_taken? in lib/position_taken.rb returns false if the board has an empty string " " in the position
-     Failure/Error: expect(position_taken?(board, position)).to be(false)
+     Failure/Error: expect(position_taken?(board, index)).to be(false)
 
        expected false
             got nil
@@ -70,7 +72,7 @@ Let's check out our next error message:
 
 ```bash
 1) #position_taken? in lib/position_taken.rb returns false if the board has an empty string "" in the position
-     Failure/Error: expect(position_taken?(board, position)).to be(false)
+     Failure/Error: expect(position_taken?(board, index)).to be(false)
 
        expected false
             got nil
@@ -86,7 +88,7 @@ It looks like our method *also* needs to treat `""` as an empty, or not taken, s
 
 Our tic tac toe game *should* utilize a board in which empty spaces are represented by an empty string that looks like this: `" "`. However, we could imagine some other programmer using our code and creating a tic tac toe game with a board in which empty spaces on the board are represented by an empty string that looks like this: `""`. We don't *intend* for our program to be run that way, but it's not that unlikely that it could happen. Thus, we have our first edge case.
 
-We need to change the content of the `#position_taken?` method to check to see if the given `board[position]` is equal to *either* an empty string that looks like this `" "` *or* an empty string that looks like this `""`.
+We need to change the content of the `#position_taken?` method to check to see if the given `board[index]` is equal to *either* an empty string that looks like this `" "` *or* an empty string that looks like this `""`.
 
 **Hint:** You can use the `||`, or "or" operator to check for both of the above-described conditions on the same line.
 
@@ -98,12 +100,12 @@ Once you get the test relating to the `""`-type of empty space passing, you're r
 Failures:
 
     1) #position_taken? in lib/position_taken.rb returns false if the board has nil in the position
-     Failure/Error: expect(position_taken?(board, position)).to be(false)
+     Failure/Error: expect(position_taken?(board, index)).to be(false)
 
        expected false
             got nil
 ```
 
-It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted position is equal to *either* an empty string, `" "`, *or* an empty string `""`, *or* `nil`.
+It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted index is equal to *either* an empty string, `" "`, *or* an empty string `""`, *or* `nil`.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-6-position-taken-rb' title='Position Taken in Tic Tac Toe'>Position Taken in Tic Tac Toe</a> on Learn.co and start learning to code for free.</p>
