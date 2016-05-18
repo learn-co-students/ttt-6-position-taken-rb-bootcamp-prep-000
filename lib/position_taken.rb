@@ -1,8 +1,8 @@
-def position_taken?(board, position)
-  # basic solution: 
+def position_taken?(board, index)
+  # basic solution:
 
   # taken = nil
-  # if (board[position] ==  " " || board[position] == "" || board[position] == nil)
+  # if (board[index] ==  " " || board[index] == "" || board[index] == nil)
   #   taken = false
   # else
   #   taken = true
@@ -10,7 +10,7 @@ def position_taken?(board, position)
   # taken
 
   # advanced solution w/ ternary operator
-  (board[position] ==  " " || board[position] == "" || board[position] == nil) ? 
+  (board[index] ==  " " || board[index] == "" || board[index] == nil) ?
     false : true
 
 end
