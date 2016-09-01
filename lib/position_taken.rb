@@ -10,5 +10,6 @@ def position_taken?(array, index)
     return true
   elsif array[index] == "O"
     return true
+    # just realized this is redundant since (mostly) everything equals true by default
   end
 end
