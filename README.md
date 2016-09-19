@@ -11,9 +11,9 @@ We already have methods that display the game board (which is mapped to an array
 
 In this lab we'll be adding a `#position_taken?` method to our Tic Tac Toe game. This method will be responsible for evaluating the user's input against the Tic Tac Toe board and checking to see whether or not that position is occupied.
 
-For example, if the user inputs that they would like to fill out position `"2"`, we would take that string `"2"` and convert it to board index 1. Then we pass the index to our `#position_taken?` and check to see if that position is vacant or if it contains an "X" or an "O". If the position is free, the method should return `false` (i.e. "not taken"), otherwise it will return `true`.
+For example, if the user inputs that they would like to fill out position `"2"`, we would take that string `"2"` and convert it to board index 1. Then we pass the index to our `#position_taken?` and check to see if that position is vacant or if it contains an "X" or an "O". If the position is free, the method should return `false` (i.e. "not taken"); otherwise it will return `true`.
 
-Basically, we have the `#position_take?` method so you don't end up playing with this guy:
+Basically, we have the `#position_taken?` method so you don't end up playing with this guy:
 
 ![robot doesnt know positio_take?](https://i.imgur.com/GTk0h37.gif "No body wants to play tic tac toe with this guy")
 
@@ -109,3 +109,5 @@ Failures:
 It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted index is equal to *either* an empty string, `" "`, *or* an empty string `""`, *or* `nil`.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-6-position-taken-rb' title='Position Taken in Tic Tac Toe'>Position Taken in Tic Tac Toe</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-6-position-taken-rb'>Tic Tac Toe Position Taken</a> on Learn.co and start learning to code for free.</p>
