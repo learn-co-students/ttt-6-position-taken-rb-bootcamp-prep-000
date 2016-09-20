@@ -110,4 +110,3 @@ It looks like our method should also account for the use of `nil` to represent a
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-6-position-taken-rb' title='Position Taken in Tic Tac Toe'>Position Taken in Tic Tac Toe</a> on Learn.co and start learning to code for free.</p>
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-6-position-taken-rb'>Tic Tac Toe Position Taken</a> on Learn.co and start learning to code for free.</p>
