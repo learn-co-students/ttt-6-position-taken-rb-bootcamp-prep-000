@@ -2,6 +2,6 @@
 
 def position_taken?(board, n)
 
-  board[n] == "X" || board[n] == "O" ? true : false
+  ["X","O"].include?(board[n])
 
 end
