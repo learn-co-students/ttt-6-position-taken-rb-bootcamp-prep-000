@@ -3,11 +3,9 @@
 def position_taken?(board, move)
   if board[move] == 'X' || board[move] == 'O'
     true
-  elsif board[move] == " "
-    false
-  elsif board[move] == ""
+  elsif board[move] == " " || board[move] == ""
     false
   elsif board[move] == nil
-    false  
+    false
   end
 end
