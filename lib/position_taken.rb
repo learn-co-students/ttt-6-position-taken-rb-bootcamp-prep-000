@@ -1,10 +1,8 @@
 
-def position_taken?(board_array, current_index)
-  if board_array[current_index] == "X" || "O"
-    result = true
+def position_taken?(arr, index)
+  if arr[index] == "X" || arr[index] == "O"
+    return true
+  else arr[index] == " " || arr[index] == "" || arr[index] == nil
+    return false
   end
-  if board_array[current_index] == " " || "" || nil
-    result = false
-  end
-  return result
 end
