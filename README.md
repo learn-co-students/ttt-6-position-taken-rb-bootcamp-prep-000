@@ -15,7 +15,7 @@ For example, if the user inputs that they would like to fill out position `"2"`,
 
 Basically, we have the `#position_taken?` method so you don't end up playing with this guy:
 
-![robot doesnt know positio_take?](https://i.imgur.com/GTk0h37.gif "No body wants to play tic tac toe with this guy")
+![Robot doesn't know `position_taken?`](https://curriculum-content.s3.amazonaws.com/web-development/ruby/tic_tac_toe_robot.gif "Nobody wants to play tic-tac-toe with this guy!")
 
 ### Validating User Input
 
@@ -109,4 +109,3 @@ Failures:
 It looks like our method should also account for the use of `nil` to represent an empty or unoccupied space on our tic tac toe board. Use the `||` operator to account for this edge case. Our `position_taken?` method should return false if the submitted index is equal to *either* an empty string, `" "`, *or* an empty string `""`, *or* `nil`.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-6-position-taken-rb' title='Position Taken in Tic Tac Toe'>Position Taken in Tic Tac Toe</a> on Learn.co and start learning to code for free.</p>
-
