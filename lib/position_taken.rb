@@ -1,1 +1,5 @@
-# code your #position_taken? method here!
+def position_taken?(board, index)
+  move = board[index]
+  return false if move == ' ' || move == '' || move.nil?
+  true
+end
