@@ -15,8 +15,7 @@ def position_taken?(board, index)
 
 end
 
-#apparently this way of coding the method wont properly execute
-'def position_taken?(board, index)
+def position_taken?(board, index)
 
   if board[index] == " " || ""
     return false
