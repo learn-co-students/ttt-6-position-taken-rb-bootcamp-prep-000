@@ -36,9 +36,9 @@ describe '#position_taken? in lib/position_taken.rb' do
     board = ["X", " ", " ", " ", " ", " ", " ", " ", "O"]
 
     index = 0
-    expect(position_taken?(board, index)).to be(true)
+    expect(position_taken?(board, index)).to be(false)
 
     index = 8
-    expect(position_taken?(board, index)).to be(true)
+    expect(position_taken?(board, index)).to be(false)
   end
 end
