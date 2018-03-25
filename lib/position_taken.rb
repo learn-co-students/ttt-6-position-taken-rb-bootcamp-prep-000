@@ -1,11 +1,11 @@
 # code your #position_taken? method here!
 def position_taken?(board, index)
   a = board[index]
-  b = a == "X" || a == "O"
-  c = a == " " || "" || nil
-if(b)
+   filled = a == "X" || a == "O"
+  empty = a == " " || "" || nil
+if(filled)
   return true
-elsif(c)
+elsif(empty)
   return false
   end
 end
