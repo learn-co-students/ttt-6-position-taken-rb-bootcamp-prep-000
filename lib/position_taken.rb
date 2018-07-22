@@ -4,7 +4,8 @@ require 'pry'
 
 def position_taken?(board, index)
   # if (board[index] == " ") || (board[index] == "") || (board[index] == nil)
-  if (!board[index]) || (board[index].strip == "")
+  # below makes use of short-circuit nature of evaluation in Ruby
+  if (!board[index]) || (board[index].strip == "") 
     false
   else
     true
