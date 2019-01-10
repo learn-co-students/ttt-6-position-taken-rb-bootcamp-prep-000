@@ -1,7 +1,7 @@
 require "pry"
 
-def position_taken?(board, square)
-  if board[square] == " " || board[square] == "" || board[square] == nil
+def position_taken?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil
     return false
   else
     return true
