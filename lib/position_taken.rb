@@ -1,1 +1,9 @@
-# code your #position_taken? method here!
+# frozen_string_literal: true
+
+def position_taken?(board, index)
+  if board[index] == ' ' then false
+  elsif board[index] == '' then false
+  elsif board[index].nil? then false
+  else true
+  end
+end

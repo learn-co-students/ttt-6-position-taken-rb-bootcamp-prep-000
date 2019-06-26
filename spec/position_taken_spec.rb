@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/position_taken.rb'
 
 describe '#position_taken? in lib/position_taken.rb' do
@@ -5,25 +7,25 @@ describe '#position_taken? in lib/position_taken.rb' do
     board = []
     index = 0
 
-    expect{position_taken?(board, index)}.to_not raise_error
+    expect { position_taken?(board, index) }.to_not raise_error
   end
 
   it 'returns false if the board has an empty string " " in the desired index' do
-    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     index = 0
 
     expect(position_taken?(board, index)).to be(false)
   end
 
-   it 'returns false if the board has an empty string "" in the index' do
-    board = ["", " ", " ", " ", " ", " ", " ", " ", " "]
+  it 'returns false if the board has an empty string "" in the index' do
+    board = ['', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     index = 0
 
     expect(position_taken?(board, index)).to be(false)
   end
 
   it 'returns false if the board has nil in the index' do
-    board = [nil, " ", " ", " ", " ", " ", " ", " ", " "]
+    board = [nil, ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     index = 0
 
     expect(position_taken?(board, index)).to be(false)
@@ -33,7 +35,7 @@ describe '#position_taken? in lib/position_taken.rb' do
   end
 
   it 'returns true if the board has a value of "X" or "O" in the index' do
-    board = ["X", " ", " ", " ", " ", " ", " ", " ", "O"]
+    board = ['X', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'O']
 
     index = 0
     expect(position_taken?(board, index)).to be(true)
