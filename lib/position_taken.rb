@@ -12,3 +12,7 @@ def position_taken?(board, index)
   end
   taken
 end
+
+# def position_taken?(board, index)
+#   (board[index] = "" || board[index] == " " || board[index] == NIL) ? false : true
+# end
